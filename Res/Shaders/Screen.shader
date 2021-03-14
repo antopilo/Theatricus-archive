@@ -276,7 +276,7 @@ float scene0(vec3 p)
 	
 	vec3 q = mod(p+0.5*vec3(0.25 ,0,0.25),vec3(0.25,0,0.25))-0.5*vec3(0.25,0,0.25);
 
-	float rock = sdSphere(q -vec3(0, 21.0f-deltaTime,0)+ vec3(0,(height + noise2) / 10.0f,0), 0.2f);
+	float rock = sdSphere(q -vec3(0, deltaTime,0)+ vec3(0,(height + noise2) / 10.0f,0), 0.2f);
 	if(rock < 0.00001)
 		return rock;
 	
@@ -284,7 +284,7 @@ float scene0(vec3 p)
 	if(res < 0.0001)
 		return min(0.1f, res);
 	// skydome
-	res = min(sdSphere(p/5.0f, 0.5f),min(rock, height2)); 
+	res = min(-sdSphere(p/50.0f, 0.5f),min(rock, height2)); 
 	
 	if(res < 0.001)
 		return min(0.1f, res);
@@ -312,7 +312,7 @@ float scene2(vec3 p)
         //k += snoise(vec3(p.x * fractal_iterations + deltaTime, p.y * fractal_iterations, p.z * fractal_iterations)) / 2 / float(fractal_iterations);
         p *= k;
         distanceFactor *= k;
-        p += vec3(0.1f + (deltaTime / 250.0f), 0.5f, 0.56);
+        p += vec3(0.1f - (deltaTime / 250.0f), 0.5f, 0.56);
     }
 
     float res = sdSphere(p, 0.2f) / abs(distanceFactor);
@@ -391,9 +391,9 @@ void main()
     float noisex = snoise(camRay.pos + (deltaTime) / 25.0f);
     float noisey = snoise(camRay.pos/2.0 + (deltaTime) / 2.0f);
     color = vec4(r, g, b, 1.0f );
-    //color.b *= 1.0f - sqrt((float(iters ) / float(2500)));
-    //color.r *= 1.0f - sqrt((float(iters + deltaTime/25.0f ) / float(2500)));
-    //color.g *= 1.0f - sqrt((float(iters * 2.0) / float(2500)));
+    color.b *= 1.0f - sqrt((float(iters ) / float(1000)));
+    color.r *= 1.0f - sqrt((float(iters + deltaTime/25.0f ) / float(1000)));
+    color.g *= 1.0f - sqrt((float(iters * 2.0) / float(1000)));
     color.r += (noisex + 1.0) / 10.0;
     color.g += (noisey + 1.0) / 7.0;
 
@@ -401,6 +401,8 @@ void main()
 	color = mix(color, vec4(totalDist / 1.0f), 0.0f);
     FragColor = color;
 }
+
+
 
 
 

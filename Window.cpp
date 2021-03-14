@@ -248,24 +248,40 @@ void Window::Draw(Timestep timestep)
 				ImGui::GetForegroundDrawList()->AddLine(pos, target, IM_COL32(255, 0, 0, 255), 3.0f);
 
 				// Markers
-				float space = ImGui::GetWindowWidth() / AnimationPlayer::Get()->m_MaxTime;
-				for (int i = 0; i < (int)AnimationPlayer::Get()->m_MaxTime; i++)
+				float space = ImGui::GetWindowWidth() / AnimationPlayer::Get()->m_MaxTime / 10;
+				for (int i = 0; i < (int)AnimationPlayer::Get()->m_MaxTime * 10; i++)
 				{
 					pos.x = ImGui::GetWindowPos().x + i * space + space;
 					target.x = ImGui::GetWindowPos().x + i * space + space;
-					ImGui::GetBackgroundDrawList()->AddLine(pos, target, IM_COL32(255, 0, 0, 255), 3.0f);
+					float size = 1.0f;
+					auto color = IM_COL32(128, 128, 128, 255);
+					if ((i + 1) % 10 == 0) {
+						color = IM_COL32(255, 255, 255, 255);
+						size = 3.0f;
+					}
+					ImGui::GetBackgroundDrawList()->AddLine(pos, target, color, size);
 				}
 
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0, 0));
-				for (int row = 0; row < 8; row++)
+				std::vector < std::string> uniforms = AnimationPlayer::Get()->GetAnimation()->GetUniforms();
+				for (int row = 0; row < uniforms.size(); row++)
 				{
-					ImGui::Dummy(ImVec2(row * 25, 25));
-					ImGui::SameLine();
-					ImGui::Button("", ImVec2(25, 25));
-					ImGui::SameLine();
-					ImGui::Dummy(ImVec2(25, 25));
-					ImGui::SameLine();
-					ImGui::Button("", ImVec2(25, 25));
+					auto kf = AnimationPlayer::Get()->GetAnimation()->GetUniformKeyframes(uniforms[row]);
+					float last = 0.0f;
+					for (int u = 0; u < kf.size(); u++)
+					{
+						float percentage = (kf[u]->time / AnimationPlayer::Get()->GetMaxTime() - last);
+						float final = percentage * (ImGui::GetWindowWidth());
+						
+						ImGui::Dummy(ImVec2(final - (25 / 2), 25));
+						ImGui::SameLine();
+						ImGui::Button("", ImVec2(25, 25));
+						
+						if(u + 1 < kf.size())
+							ImGui::SameLine();
+						last = percentage;
+
+					}
 				}
 				
 				ImGui::PopStyleVar();

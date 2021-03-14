@@ -212,4 +212,29 @@ public:
 
 		return result;
 	}
+
+	std::vector<KeyFrame*> GetUniformKeyframes(std::string uniform)
+	{
+		std::vector<KeyFrame*> result;
+
+		// contains uniform.
+		if (m_Timeline.find(uniform) != m_Timeline.end())
+		{
+			LinkedList* list = m_Timeline[uniform];
+
+			if (list->Count() > 0)
+			{
+				LinkedListNode* current = list->Start();
+				for (int i = 0; i < list->Count(); i++)
+				{
+					result.push_back(current->Value);
+					if (list->Count() > 1)
+						current = current->Next();
+				}
+			}
+			
+		}
+
+		return result;
+	}
 };
