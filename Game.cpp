@@ -57,7 +57,7 @@ Game::Game()
 
     anim->AddKeyframe("test", 0.0f, 1.0f);
     anim->AddKeyframe("test", 0.6f, 3.0f);
-    anim->AddKeyframe("test", 0.5f, 2.0f);
+    anim->AddKeyframe("hello", 0.5f, 2.0f);
 
     anim->AddKeyframe("u_testing", 0.0f, 1.0f);
     //anim->RemoveKeyframe("test", 1);
@@ -86,6 +86,14 @@ void Game::Draw(Camera* camera)
     glm::vec3 lookAt = camera->GetLookAt(); 
     Renderer::QuadShader->SetUniform3f("camPosition", pos.x, pos.y, pos.z);
     Renderer::QuadShader->SetUniform3f("camLookAt", lookAt.x, lookAt.y, lookAt.z);
+
+    std::vector<std::string> uniforms = AnimationPlayer::Get()->GetAnimation()->GetUniforms();
+    for (int i = 0; i < uniforms.size(); i++)
+    {
+        float value = AnimationPlayer::Get()->GetUniformvalue(uniforms[i], AnimationPlayer::Get()->GetCurrentTime());
+        Renderer::QuadShader->SetUniform1f(uniforms[i], value);
+    }
+
     //Renderer::QuadShader->SetUniform3f("camUp", camera->cameraUp.x, camera->cameraUp.y, camera->cameraUp.z);
     //Renderer::QuadShader->SetUniform3f("camRight", camera->cameraRight.x, camera->cameraRight.y, camera->cameraRight.z);
     glBindVertexArray(VAO);

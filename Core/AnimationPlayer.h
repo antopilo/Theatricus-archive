@@ -86,4 +86,10 @@ public:
 
 		m_MaxTime = t;
 	}
+
+	float GetUniformvalue(std::string u, float t)
+	{
+		Animation* anim = GetAnimation();
+		return anim->GetUniformValue(u, t);
+	}
 };

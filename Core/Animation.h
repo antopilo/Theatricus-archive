@@ -4,6 +4,9 @@
 #include <string>;
 #include <map>;
 
+#include <assert.h>
+#define ASSERT(x) if (!(x)) assert(false)
+
 struct KeyFrame
 {
 	float time;
@@ -15,8 +18,8 @@ struct KeyFrame
 class LinkedListNode
 {
 private:
-	LinkedListNode* m_Next;
-	LinkedListNode* m_Previous;
+	LinkedListNode* m_Next = nullptr;
+	LinkedListNode* m_Previous = nullptr;
 
 public:
 	KeyFrame* Value;
@@ -24,8 +27,16 @@ public:
 	LinkedListNode(KeyFrame* value) { Value = value; }
 	~LinkedListNode() { delete Value; }
 
-	LinkedListNode* Next() { return m_Next; }
-	LinkedListNode* Previous() { return m_Previous; }
+	LinkedListNode* Next() 
+	{ 
+		
+		return m_Next; 
+	}
+	LinkedListNode* Previous() 
+	{ 
+		
+		return m_Previous; 
+	}
 
 	void SetNext(LinkedListNode* node) { m_Next = node; }
 	void SetPrevious(LinkedListNode* node) { m_Previous = node; }
@@ -237,4 +248,54 @@ public:
 
 		return result;
 	}
+
+	float GetUniformValue(std::string u, float t)
+	{
+		// No uniform in the timeline.
+		if (m_Timeline.find(u) == m_Timeline.end())
+			return 0.0f;
+
+		LinkedList* l = m_Timeline[u];
+		if (l->Count() == 0)
+			return 0.0f;
+		if (l->Count() == 1)
+			return l->Start()->Value->value;
+
+		if (l->Start()->Value->time >= t)
+			return l->Start()->Value->value;
+		if (l->End()->Value->time <= t)
+			return l->End()->Value->value;
+
+		// Next node until time of node is > than T.
+		// Take % of T between previous and found node.
+		// Depending on the interpolation return lerp(prevValue, next, %);
+		auto current = l->Start();
+		for (int i = 0; i < l->Count(); i++)
+		{
+			if (current->Value->time < t && current->Next() != nullptr)
+				current = current->Next();
+			else
+			{
+				float start = current->Previous()->Value->value;
+				float end = current->Value->value;
+
+				float startT = current->Previous()->Value->time;
+				float endT = current->Value->time;
+
+				// calculate %
+				float scaled = t - startT;
+				float max = endT - startT;
+				float perc = scaled / max;
+
+				return lerp(start, end, perc);
+			}
+
+		}
+	}
+
+	float lerp(float a, float b, float f)
+	{
+		return a + f * (b - a);
+	}
 };
+

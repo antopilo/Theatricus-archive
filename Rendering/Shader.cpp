@@ -2,7 +2,6 @@
 #include "Shader.h"
 #include <sstream>
 #include <GL\glew.h>
-
 #define ASSERT(x) if (!(x)) assert(false)
 
 // TODO: Register all uniform when creating shader.
@@ -122,9 +121,9 @@ int Shader::FindUniformLocation(std::string uniform) {
 	if (UniformCache.find(uniform) == UniformCache.end()) {
 		int addr = glGetUniformLocation(ProgramId, uniform.c_str());
 
-		if (addr == -1)
-			std::cout << "Warning: uniform '" << uniform << "' doesn't exists!" << std::endl;
-		else {
+		//if (addr == -1)
+			//std::cout << "Warning: uniform '" << uniform << "' doesn't exists!" << std::endl;
+		if(addr != -1) {
 			std::cout << "Info: uniform '" << uniform << "' registered." << std::endl;
 			UniformCache[uniform] = addr;
 		}

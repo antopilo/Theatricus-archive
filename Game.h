@@ -1,6 +1,5 @@
 #pragma once
 #include "Rendering/FrameBuffer.h"
-
 class Camera;
 class Game
 {

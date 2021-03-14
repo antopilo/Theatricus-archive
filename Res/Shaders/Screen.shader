@@ -20,7 +20,7 @@ uniform vec3 camPosition;
 uniform vec3 camLookAt;
 uniform vec3 camUp;
 uniform float deltaTime;
-
+uniform float test;
 
 out vec4 FragColor;
 
@@ -270,13 +270,13 @@ int currentScene = 0;
 float scene0(vec3 p)
 {
 	float height = snoise(vec2(p.x / 1.0f, p.z / 1.0f)) / 1.0f;
-	float noise2 = snoise(vec2((p.x + deltaTime) / 5.0f, p.z / 5.0f)) * 10.0f;
+	float noise2 = snoise(vec2((p.x + (test) ) / 5.0f, p.z / 5.0f)) * 10.0f;
 	
 	float height2 = sdPlane(p, vec3(0, 1, 0), (height + noise2) / 10.0f);
 	
 	vec3 q = mod(p+0.5*vec3(0.25 ,0,0.25),vec3(0.25,0,0.25))-0.5*vec3(0.25,0,0.25);
 
-	float rock = sdSphere(q -vec3(0, deltaTime,0)+ vec3(0,(height + noise2) / 10.0f,0), 0.2f);
+	float rock = sdSphere(q -vec3(0, 0,0)+ vec3(0,(height + noise2) / 10.0f,0), 0.2f);
 	if(rock < 0.00001)
 		return rock;
 	
@@ -401,6 +401,9 @@ void main()
 	color = mix(color, vec4(totalDist / 1.0f), 0.0f);
     FragColor = color;
 }
+
+
+
 
 
 

@@ -64,6 +64,8 @@ Window::Window(int width, int height, const std::string title)
 }
 
 float deltaTime = 0.0f;
+KeyFrame* selectedKeyFrame = nullptr;
+std::string selectedTrack = "";
 void Window::Draw(Timestep timestep)
 {
 	int width, height;
@@ -208,33 +210,49 @@ void Window::Draw(Timestep timestep)
 			ImGui::Text(currentTime.c_str());
 			ImGui::SameLine();
 			ImGui::InputFloat("Length", &AnimationPlayer::Get()->m_MaxTime, 0.5f);
+			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 			ImGui::BeginChild("##uniforms", size, true);
 			{
 				std::vector < std::string> uniforms = AnimationPlayer::Get()->GetAnimation()->GetUniforms();
+				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0, 0));
 				for (int i = 0; i < uniforms.size(); i++)
 				{
-					ImGui::Text(uniforms[i].c_str());
+					
+					ImGui::Button(uniforms[i].c_str(), ImVec2(size.x, 25));
+				
+			
 				}
+				ImGui::PopStyleVar();
 				ImGui::EndChild();
 			}
+			ImGui::PopStyleVar();
 			ImGui::SameLine();
 			size = ImGui::GetContentRegionAvail();
 
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 			ImGui::BeginChild("##time", size, true);
 			{
-				
-				Input::IsMouseButtonPressed(1);
+				if (ImGui::BeginPopupContextItem("sssss"))
+				{
+					if (ImGui::Selectable("Add key"))
 
+						if (ImGui::Selectable("Copy"));
+					if (ImGui::Selectable("Copy Value"));
+					if (ImGui::Selectable("Copy Time"));
+					ImGui::EndPopup();
+				}
 
 				ImVec2 pos = ImGui::GetWindowPos();
 				ImVec2 cursor = ImGui::GetMousePos();
 
 				
-				if (cursor.x > pos.x && cursor.x < pos.x + ImGui::GetWindowWidth() && ImGui::IsMouseDragging(0))
+				if (cursor.x > pos.x && cursor.x < pos.x + ImGui::GetWindowWidth() && ImGui::IsMouseDragging(0) && ImGui::IsWindowFocused())
 				{
 					pos.x = cursor.x;
-					AnimationPlayer::Get()->SetCurrentTime(((pos.x - ImGui::GetWindowPos().x )/ ImGui::GetWindowWidth())* AnimationPlayer::Get()->m_MaxTime);
+					float time = ((pos.x - ImGui::GetWindowPos().x) / ImGui::GetWindowWidth()) * AnimationPlayer::Get()->m_MaxTime;
+
+					if(time >= 0 && time <= AnimationPlayer::Get()->m_MaxTime)
+						AnimationPlayer::Get()->SetCurrentTime(time);
 				}
 				else
 				{
@@ -264,6 +282,9 @@ void Window::Draw(Timestep timestep)
 
 				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(0, 0));
 				std::vector < std::string> uniforms = AnimationPlayer::Get()->GetAnimation()->GetUniforms();
+
+				if (ImGui::IsMouseReleased(0) && ImGui::IsWindowFocused())
+					selectedKeyFrame = nullptr;
 				for (int row = 0; row < uniforms.size(); row++)
 				{
 					auto kf = AnimationPlayer::Get()->GetAnimation()->GetUniformKeyframes(uniforms[row]);
@@ -274,16 +295,69 @@ void Window::Draw(Timestep timestep)
 						float final = percentage * (ImGui::GetWindowWidth());
 						
 						ImGui::Dummy(ImVec2(final - (25 / 2), 25));
+					
 						ImGui::SameLine();
-						ImGui::Button("", ImVec2(25, 25));
+
+						ImGui::PushID(row* u);
+						std::string id = "##" + std::to_string(row * 100 + u);
 						
-						if(u + 1 < kf.size())
+						bool hasStyle = selectedKeyFrame == kf[u];
+
+						if(hasStyle)
+							ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.2, 0.4, 1.00f, 1.0f));
+				
+						
+
+						if (ImGui::IsMouseDragging(0) && hasStyle)
+						{
+							ImVec2 mousePos = ImGui::GetMousePos();
+							mousePos.x = mousePos.x; // TODO: Add snapping here.
+							float time = ((mousePos.x - ImGui::GetWindowPos().x) / ImGui::GetWindowWidth()) * AnimationPlayer::Get()->m_MaxTime;
+
+							if (time >= 0 && time <= AnimationPlayer::Get()->m_MaxTime)
+								kf[u]->time = time;
+						}
+
+						if (ImGui::Button(id.c_str(), ImVec2(25, 25)))
+						{
+
+							
+							selectedTrack = uniforms[row];
+							selectedKeyFrame = kf[u];
+						}
+					
+					
+						std::string contextId = "##" + std::to_string(100 * row + u) + "context";
+						if (ImGui::BeginPopupContextItem(contextId.c_str()))
+						{
+							if (ImGui::Selectable("Delete"))
+								AnimationPlayer::Get()->GetAnimation()->RemoveKeyframe(selectedTrack, u);
+							if (ImGui::Selectable("Copy"));
+							if (ImGui::Selectable("Copy Value"));
+							if (ImGui::Selectable("Copy Time"));
+							ImGui::EndPopup();
+						}
+						
+						
+						
+						if (hasStyle)
+							ImGui::PopStyleColor();
+
+						ImGui::PopID();
+						
+						
+						
+						if(u < kf.size() - 1)
 							ImGui::SameLine();
+
 						last = percentage;
 
 					}
 				}
 				
+				
+
+
 				ImGui::PopStyleVar();
 
 
@@ -293,7 +367,21 @@ void Window::Draw(Timestep timestep)
 			ImGui::PopStyleVar();
 			ImGui::EndChild();
 		}
-		
+
+		if (ImGui::Begin("Inspector"))
+		{
+			if (selectedKeyFrame != nullptr){
+				ImGui::Text(selectedTrack.c_str());
+				ImGui::SameLine();
+				ImGui::Text(" - float");
+
+				ImGui::InputFloat("Time", &(selectedKeyFrame->time));
+				ImGui::InputFloat("Value", &(selectedKeyFrame->value));
+			}
+			
+			
+		}
+		ImGui::End();
 
 		ImGui::End();
 
