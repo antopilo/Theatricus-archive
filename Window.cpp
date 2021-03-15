@@ -295,6 +295,7 @@ void Window::Draw(Timestep timestep)
 				//		AnimationPlayer::Get()->Play();
 				//}
 
+				
 				if (ImGui::BeginPopupContextItem("sssss"))
 				{
 					if (ImGui::Selectable("Add key"))
@@ -354,10 +355,10 @@ void Window::Draw(Timestep timestep)
 					float last = 0.0f;
 					for (int u = 0; u < kf.size(); u++)
 					{
-						float percentage = (kf[u]->time / AnimationPlayer::Get()->GetMaxTime() - last);
-						float final = percentage * (ImGui::GetWindowWidth());
+						float percentage = (kf[u]->time / AnimationPlayer::Get()->GetMaxTime() );
+						float final = (percentage - last) * (ImGui::GetWindowWidth());
 						
-						ImGui::Dummy(ImVec2(final - (25 / 2), 25));
+						ImGui::Dummy(ImVec2(final - (25), 25));
 					
 						ImGui::SameLine();
 

@@ -66,30 +66,57 @@ public:
 			m_Count++;
 			return;
 		}
-
-
-		LinkedListNode* current = m_Start;
-
-		if (position == 0) {
-			current->SetPrevious(node);
-			node->SetNext(current);
-			m_Start = node;
-		}
-		else if (position == m_Count) {
-			m_End->SetNext(node);
-			node->SetPrevious(m_End);
-			m_End = node;
-		}
-		else {
-			for (int i = 0; i < position; i++)
+		else if (m_Count == 1)
+		{
+			LinkedListNode* current = m_Start;
+			if (position == 0)
 			{
-				current = current->Next();
-			}
+				m_Start = node;
+				node->SetNext(current);
 
-			LinkedListNode* newNext = current;
-			current->SetNext(node);
-			newNext->SetPrevious(node);
+				m_End = current;
+				m_Count++;
+				return;
+			}
+			else
+			{
+				m_End = node;
+				node->SetPrevious(m_Start);
+				m_Start->SetNext(node);
+				m_Count++;
+				return;
+			}
 		}
+		else
+		{
+			LinkedListNode* current = m_Start;
+			if (position == 0) {
+				current->SetPrevious(node);
+				node->SetNext(current);
+				m_Start = node;
+			}
+			else if (position == m_Count) {
+				m_End->SetNext(node);
+				node->SetPrevious(m_End);
+				m_End = node;
+			}
+			else {
+				for (int i = 0; i < position; i++)
+				{
+					current = current->Next();
+				}
+
+				current->Previous()->SetNext(node);
+				node->SetPrevious(current->Previous());
+				node->SetNext(current);
+				current->SetPrevious(node);
+				
+			}
+		}
+
+		
+
+		
 
 		m_Count++;
 	}
@@ -196,6 +223,8 @@ public:
 				LinkedListNode* current = ll->Start();
 				for (int i = 0; i < ll->Count(); i++)
 				{
+					if (current->Value->time == time)
+						return;
 					if (current->Value->time < time)
 					{
 						current = current->Next();
