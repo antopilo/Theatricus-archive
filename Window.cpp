@@ -72,6 +72,8 @@ Window::Window(int width, int height, const std::string title)
 }
 
 char buffText[32];
+int selectedType;
+const char* types[] = { "float", "int", "vector3", "vector2" };
 float deltaTime = 0.0f;
 KeyFrame* selectedKeyFrame = nullptr;
 std::string selectedTrack = "";
@@ -264,6 +266,7 @@ void Window::Draw(Timestep timestep)
 					ImGui::Separator();
 					ImGui::InputText("Uniform name", buffText, 32);
 
+					ImGui::ListBox("Type", &selectedType, types, 4);
 
 					if (ImGui::Button("Close", ImVec2(100, 30)))
 						ImGui::CloseCurrentPopup();
@@ -285,7 +288,7 @@ void Window::Draw(Timestep timestep)
 			size = ImGui::GetContentRegionAvail();
 
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
-			ImGui::BeginChild("##time", size, true);
+			ImGui::BeginChild("##time", size, true, ImGuiWindowFlags_HorizontalScrollbar);
 			{
 				//if (ImGui::IsWindowFocused() && !Input::IsKeyReleased(GLFW_KEY_SPACE))
 				//{
@@ -415,6 +418,15 @@ void Window::Draw(Timestep timestep)
 
 						last = percentage;
 
+					}
+					ImGui::SameLine();
+					ImGui::Dummy(ImVec2(2000, 25));
+					float s = ImGui::GetScrollX();
+					if (kf.size() == 0)
+					{
+						ImGui::SameLine();
+
+						ImGui::Dummy(ImVec2(0, 25));
 					}
 				}
 				
