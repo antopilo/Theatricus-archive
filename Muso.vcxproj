@@ -114,7 +114,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\GLEW\include;$(ProjectDir)Dependencies\GLFW\x64\include;$(ProjectDir)Vendors;$(ProjectDir)Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -132,7 +132,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\GLEW\include;$(ProjectDir)Dependencies\GLFW\x64\include;$(ProjectDir)Vendors;$(ProjectDir)Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -164,6 +164,7 @@
     <ClCompile Include="Vendors\imgui\imgui_stdlib.cpp" />
     <ClCompile Include="Vendors\imgui\imgui_tables.cpp" />
     <ClCompile Include="Vendors\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Vendors\imgui\imnodes.cpp" />
     <ClCompile Include="Vendors\imgui\TextEditor.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -189,6 +190,7 @@
     <ClInclude Include="Vendors\imgui\imgui_impl_opengl3.h" />
     <ClInclude Include="Vendors\imgui\imgui_internal.h" />
     <ClInclude Include="Vendors\imgui\imgui_stdlib.h" />
+    <ClInclude Include="Vendors\imgui\imnodes.h" />
     <ClInclude Include="Vendors\imgui\imstb_rectpack.h" />
     <ClInclude Include="Vendors\imgui\imstb_textedit.h" />
     <ClInclude Include="Vendors\imgui\imstb_truetype.h" />

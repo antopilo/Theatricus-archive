@@ -12,6 +12,7 @@
 #include "Input/Input.h"
 #include "Core/AnimationPlayer.h"
 #include "imgui/FontAwesome5.h"
+#include <imgui/imnodes.h>
 
 GLFWwindow* Window::m_Window;
 Camera* camera;
@@ -44,6 +45,7 @@ Window::Window(int width, int height, const std::string title)
 	Renderer::Init();
 
 	ImGui::CreateContext();
+	imnodes::Initialize();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 	io.Fonts->AddFontDefault();
@@ -419,8 +421,8 @@ void Window::Draw(Timestep timestep)
 						last = percentage;
 
 					}
-					ImGui::SameLine();
-					ImGui::Dummy(ImVec2(2000, 25));
+					//ImGui::SameLine();
+					//ImGui::Dummy(ImVec2(2000, 25));
 					float s = ImGui::GetScrollX();
 					if (kf.size() == 0)
 					{
@@ -461,7 +463,49 @@ void Window::Draw(Timestep timestep)
 		ImGui::End();
 
 	}
+	const int hardcoded_node_id = 1;
 
+	ImGui::Begin("Pipeline");
+	{
+
+		imnodes::BeginNodeEditor();
+
+		imnodes::BeginNode(hardcoded_node_id);
+			imnodes::BeginNodeTitleBar();
+				ImGui::TextUnformatted("Final Image");
+			imnodes::EndNodeTitleBar();
+
+			// output slot
+			const int output_attr_id = 2;
+			imnodes::BeginOutputAttribute(output_attr_id);
+				ImGui::Text("output");
+			imnodes::EndOutputAttribute();
+
+			imnodes::BeginInputAttribute(3);
+				ImGui::Text("input");
+			imnodes::EndInputAttribute();
+		imnodes::EndNode();
+
+		imnodes::BeginNode(2);
+		imnodes::BeginNodeTitleBar();
+		ImGui::TextUnformatted("FrameBuffer 1");
+		imnodes::EndNodeTitleBar();
+
+		// output slot
+		imnodes::BeginOutputAttribute(4);
+		ImGui::Text("output");
+		imnodes::EndOutputAttribute();
+
+		imnodes::BeginInputAttribute(6);
+		ImGui::Text("input");
+		imnodes::EndInputAttribute();
+		imnodes::EndNode();
+
+		imnodes::EndNodeEditor();
+
+		
+	}
+	ImGui::End();
 
 
 	ImGui::Render();

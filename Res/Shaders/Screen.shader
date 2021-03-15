@@ -269,22 +269,23 @@ int currentScene = 0;
 
 float scene0(vec3 p)
 {
-	float height = snoise(vec2(p.x / 1.0f, p.z / 1.0f)) / 1.0f;
-	float noise2 = snoise(vec2((p.x + (test) ) / 5.0f, p.z / 5.0f)) * 10.0f;
+	float scale = 4.0f;
+	float height = snoise(vec2(p.x * scale, p.z * scale)) / 4.0f;
+	float noise2 = snoise(vec2((p.x + (test) ) * 10.0f, p.z * 10.0f)) / 4.0f;
 	
 	float height2 = sdPlane(p, vec3(0, 1, 0), (height + noise2) / 10.0f);
 	
-	vec3 q = mod(p+0.5*vec3(0.25 ,0,0.25),vec3(0.25,0,0.25))-0.5*vec3(0.25,0,0.25);
+	vec3 q = mod(p+0.5*vec3(0.1 ,0,0.1),vec3(0.1,0,0.1))-0.5*vec3(0.1,0,0.1);
 
-	float rock = sdSphere(q -vec3(0, 0,0)+ vec3(0,(height + noise2) / 10.0f,0), 0.2f);
-	if(rock < 0.00001)
-		return rock;
+	//float rock = sdSphere(q -vec3(0, 0,0)+ vec3(0,(height + noise2) / 10.0f,0), 0.05f);
+	//if(rock < 0.00001)
+	//	return rock;
 	
-	float res = min(rock, height2);
+	float res = min(0.01, height2);
 	if(res < 0.0001)
 		return min(0.1f, res);
 	// skydome
-	res = min(-sdSphere(p/50.0f, 0.5f),min(rock, height2)); 
+	res = min(0.1f,min(0.01, height2)); 
 	
 	if(res < 0.001)
 		return min(0.1f, res);
@@ -337,12 +338,12 @@ float dstToScene(vec3 p) {
 }
 
 const float hardScale = 100.0f;
-vec3 GetNormal(vec3 p, float scale) {
+vec3 GetNormal2(vec3 p, float scale) {
     float d = dstToScene(p);
     
-    if(scale < 0.05f) scale = 0.05f;
-//    vec2 e = vec2(((scale * scale) / hardScale), 0);
-		vec2 e = vec2(0.00001, 0);
+    if(scale > 0.0001f) scale = 0.01f;
+    //vec2 e = vec2(((scale * scale) / hardScale), 0);
+	vec2 e = vec2(0.0001, 0);
     vec3 n = d - vec3(
         dstToScene(p - e.xyy),
         dstToScene(p - e.yxy),
@@ -350,6 +351,33 @@ vec3 GetNormal(vec3 p, float scale) {
 
     return normalize(n);
 }
+
+vec3 GetNormal3(vec3 p, float scale){
+    vec3 eps = vec3(.0001,0,0);
+    vec3 nor = vec3(
+        dstToScene(p+eps.xyy) - dstToScene(p-eps.xyy),
+        dstToScene(p+eps.yxy) - dstToScene(p-eps.yxy),
+        dstToScene(p+eps.yyx) - dstToScene(p-eps.yyx)
+    );
+    return normalize(nor);
+}
+const int NORMAL_STEPS = 6;
+vec3 GetNormal(vec3 p, float scale){
+    vec3 eps = vec3(.0001,0,0);
+    vec3 nor = vec3(0);
+    float invert = 1.;
+    for (int i = 0; i < NORMAL_STEPS; i++){
+        nor += dstToScene(p + eps * invert) * eps * invert;
+        eps = eps.zxy;
+        invert *= -1.;
+    }
+    return normalize(nor);
+}
+
+float gaussian(float z, float u, float o) {
+    return (1.0 / (o * sqrt(2.0 * 3.1415))) * exp(-(((z - u) * (z - u)) / (2.0 * (o * o))));
+}
+
 uniform float hello;
 uniform float u_testing;
 void main()
@@ -365,22 +393,23 @@ void main()
     float totalDist = 0.0;
     float finalDist = dstToScene(camRay.pos);
     int iters = 0;
-    int maxIters = 4500;
+    int maxIters = 250;
     int wentInside = 0;
 
     vec4 color;
 
     for (iters = 0; iters < maxIters && finalDist >0.0001; iters++)
     {
-        camRay.pos += finalDist * (camRay.dir) * 0.8f;
+        camRay.pos += finalDist * (camRay.dir) * 1f;
         totalDist += finalDist;
         finalDist = dstToScene(camRay.pos);
+
     }
     vec3 direction = vec3(0.1f, 0.7f, 0.2f);
     vec3 normal = GetNormal(camRay.pos, totalDist);
     vec3 lightPos = vec3(0.0, 1.0, 0.0);
 
-    float dotSN = dot(normal, normalize(direction));
+    float dotSN = dot(normalize(normal), normalize(direction));
     
     dotSN = clamp(dotSN, 0.8f, 1.6f);
     //color = vec4(0.5 + 0.5 * normal, 1.0);
@@ -390,17 +419,33 @@ void main()
     
     float noisex = snoise(camRay.pos + (deltaTime) / 25.0f);
     float noisey = snoise(camRay.pos/2.0 + (deltaTime) / 2.0f);
-    color = vec4(r, g, b, 1.0f );
-    color.b *= 1.0f - sqrt((float(iters ) / float(1000)));
-    color.r *= 1.0f - sqrt((float(iters + deltaTime/25.0f ) / float(1000)));
-    color.g *= 1.0f - sqrt((float(iters * 2.0) / float(1000)));
-    color.r += (noisex + 1.0) / 10.0;
-    color.g += (noisey + 1.0) / 7.0;
-
+    color = vec4(normal, 1.0f );
+    color.b *= 1.0f - sqrt((float(iters ) / float(maxIters)));
+    color.r *= 1.0f - sqrt((float(iters + deltaTime/25.0f ) / float(maxIters)));
+    color.g *= 1.0f - sqrt((float(iters * 2.0) / float(maxIters)));
+    //color.r += (noisex + 1.0) / 10.0;
+    //color.g += (noisey + 1.0) / 7.0;
+	float infinite = iters / 250;
+	float starNoise = (snoise(normalize(camRay.dir).xyz * 45.0f) - 0.85f) * 5.2f;
+	float intensity = (snoise(normalize(camRay.dir + vec3(deltaTime / 10.0f).xyz )) * 5.2f);
+	vec4 starColor = vec4(starNoise, starNoise, starNoise, 1.0f);
+	starColor.r = starNoise;
+	starColor.g = (snoise(normalize(camRay.dir).xyz * 50.0f) - 0.85f) * (5.0f + intensity);
+	starColor.b = mix(starNoise, starColor.g, 0.5f);
+	color = mix(color, starColor, infinite);
+	
+	float seed = dot(uv, vec2(12.9898, 78.233));
+    float grainNoise = fract(sin(seed) * 43758.5453 + deltaTime);
+    grainNoise = gaussian(grainNoise, float(0.0), float(0.6) * float(0.6));
+    vec3 grain = vec3(grainNoise) * (1.0 - color.rgb);
+    color.rgb += grain * 0.055;
     //color.r = mix(color.r, 0.5f,sin(deltaTime) * 0.5f);
-	color = mix(color, vec4(totalDist / 1.0f), 0.0f);
+	//color = mix(color, vec4(totalDist / 1.0f), 0.0f);
     FragColor = color;
 }
+
+
+
 
 
 

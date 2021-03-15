@@ -72,6 +72,9 @@
     <ClCompile Include="Core\AnimationPlayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vendors\imgui\imnodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -150,6 +153,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Vendors\imgui\FontAwesome5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendors\imgui\imnodes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
