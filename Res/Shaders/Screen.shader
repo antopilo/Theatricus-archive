@@ -34,7 +34,7 @@ ray create_camera_ray(vec2 uv, vec3 camPos, vec3 lookAt, float zoom) {
     vec3 r = normalize(cross(vec3(0, 1, 0), f));
     vec3 u = normalize(cross(f, r));
 
-    vec3 c = camPos + f * 1.0;
+    vec3 c = camPos + f * zoom;
     vec3 i = c + uv.x * -r + uv.y * u;
     vec3 dir = i - camPos;
     return ray(camPos, dir);
@@ -350,17 +350,17 @@ vec3 GetNormal(vec3 p, float scale) {
 
     return normalize(n);
 }
-
-
+uniform float hello;
+uniform float u_testing;
 void main()
 {
-    vec3 camPos = vec3(2.0, 1.0, 0.5);
+    vec3 camPos = vec3(2.0, 1.0 + hello, 0.5);
     vec3 lookAt = vec3(0.0);
-    float zoom = 1.0;
+    float zoom = u_testing;
 
     vec2 uv = (v_UV + 1.0) / 2.0;
 
-    ray camRay = create_camera_ray(v_UV, camPosition, camLookAt, zoom);
+    ray camRay = create_camera_ray(v_UV, camPosition + vec3(hello, 0, 0), camLookAt + vec3(hello, 0, 0), zoom);
 
     float totalDist = 0.0;
     float finalDist = dstToScene(camRay.pos);
@@ -401,6 +401,7 @@ void main()
 	color = mix(color, vec4(totalDist / 1.0f), 0.0f);
     FragColor = color;
 }
+
 
 
 

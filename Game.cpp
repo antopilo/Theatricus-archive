@@ -6,6 +6,8 @@
 
 #include "Core/AnimationPlayer.h"
 
+
+
 unsigned int VAO = 0;
 unsigned int VBO = 0;
 Vertex2d vertices[6]
@@ -78,8 +80,6 @@ void Game::Draw(Camera* camera)
     // Post-process
 
     // UI
-
-
     Renderer::QuadShader->Bind();
 
     glm::vec3 pos = camera->GetTranslation();

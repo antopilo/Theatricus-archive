@@ -182,6 +182,7 @@
     <ClInclude Include="Rendering\Vertex.h" />
     <ClInclude Include="Rendering\VertexBuffer.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Vendors\imgui\FontAwesome5.h" />
     <ClInclude Include="Vendors\imgui\imconfig.h" />
     <ClInclude Include="Vendors\imgui\imgui.h" />
     <ClInclude Include="Vendors\imgui\imgui_impl_glfw.h" />

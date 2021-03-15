@@ -117,10 +117,21 @@ public:
 			
 			
 		}
-		else if (position == m_Count)
+		else if (position == m_Count - 1)
 		{
-			current = m_End;
-			LinkedListNode* prev = current->Previous();
+			if (m_Count == 1)
+			{
+				m_Start = nullptr;
+				m_End = nullptr;
+
+			}
+			else
+			{
+				current = m_End;
+				LinkedListNode* prev = current->Previous();
+				m_End = prev;
+				delete current;
+			}
 		}
 		else
 		{
@@ -289,13 +300,23 @@ public:
 
 				return lerp(start, end, perc);
 			}
-
 		}
 	}
 
 	float lerp(float a, float b, float f)
 	{
 		return a + f * (b - a);
+	}
+
+	bool RenameUniform(std::string s1, std::string s2)
+	{
+		// Check if key already exists
+		if (m_Timeline.find(s2) != m_Timeline.end())
+			return false;
+
+		m_Timeline[s2] = m_Timeline[s1];
+
+		m_Timeline.erase(s1);
 	}
 };
 

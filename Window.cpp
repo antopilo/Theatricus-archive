@@ -11,6 +11,8 @@
 #include <imgui/TextEditor.h>
 #include "Input/Input.h"
 #include "Core/AnimationPlayer.h"
+#include "imgui/FontAwesome5.h"
+
 GLFWwindow* Window::m_Window;
 Camera* camera;
 
@@ -44,6 +46,12 @@ Window::Window(int width, int height, const std::string title)
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	io.Fonts->AddFontDefault();
+	// merge in icons from Font Awesome
+	static const ImWchar icons_ranges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };
+	ImFontConfig icons_config; icons_config.MergeMode = true; icons_config.PixelSnapH = true;
+	io.Fonts->AddFontFromFileTTF(FONT_ICON_FILE_NAME_FAS, 16.0f, &icons_config, icons_ranges);
+
 	ImGui::StyleColorsDark();
 
 	ImGui_ImplGlfw_InitForOpenGL(m_Window, true);
@@ -63,6 +71,7 @@ Window::Window(int width, int height, const std::string title)
 	}
 }
 
+char buffText[32];
 float deltaTime = 0.0f;
 KeyFrame* selectedKeyFrame = nullptr;
 std::string selectedTrack = "";
@@ -112,6 +121,7 @@ void Window::Draw(Timestep timestep)
 	auto cpos = editor.GetCursorPosition();
 	ImGui::Begin("Shader settings", nullptr, ImGuiWindowFlags_MenuBar);
 	{
+		
 		if (ImGui::Button("Reload"))
 		{
 			Renderer::ReloadShader();
@@ -199,11 +209,17 @@ void Window::Draw(Timestep timestep)
 			ImVec2 size = ImGui::GetContentRegionAvail();
 			size.x *= 0.2f;
 
-			if(ImGui::Button("Play"))
+			if(ImGui::Button(ICON_FA_PLAY""))
 				AnimationPlayer::Get()->Play();
 			ImGui::SameLine();
-			if(ImGui::Button("Stop"))
+			if (ImGui::Button(ICON_FA_STOP""))
+			{
+				if (!AnimationPlayer::Get()->IsPlaying())
+					AnimationPlayer::Get()->SetCurrentTime(0);
+
 				AnimationPlayer::Get()->Stop();
+			}
+			
 
 			ImGui::SameLine();
 			std::string currentTime = "Current time: " + std::to_string(AnimationPlayer::Get()->GetCurrentTime());
@@ -218,10 +234,49 @@ void Window::Draw(Timestep timestep)
 				for (int i = 0; i < uniforms.size(); i++)
 				{
 					
-					ImGui::Button(uniforms[i].c_str(), ImVec2(size.x, 25));
+					ImGui::Button(uniforms[i].c_str(), ImVec2(size.x - 25, 25));
+					ImGui::SameLine();
+					if (ImGui::Button((ICON_FA_KEY  "##" + std::to_string(i)).c_str(), ImVec2(25, 25)))
+					{
+						AnimationPlayer::Get()->GetAnimation()->AddKeyframe(uniforms[i].c_str(), AnimationPlayer::Get()->GetCurrentTime(), 1.0f);
+					}
 				
 			
 				}
+				bool openpopuptemp = true;
+	
+				if (ImGui::Button(ICON_FA_PLUS, ImVec2(size.x, 30)))
+				{
+					ImGui::OpenPopup("Delete?");
+					
+				}
+
+				ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(8, 8));
+				ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(8, 8));
+				if (ImGui::BeginPopupModal("Delete?", &openpopuptemp, ImGuiWindowFlags_NoResize))
+				{
+					ImGui::Text("Add a new animated uniform:");
+					ImGui::Dummy(ImVec2(0, 32));
+					ImGui::Text("Note:");
+					ImGui::TextWrapped("Currently only floats are supported, but its possible to edit a single float of a vector by \
+						Doing u_MyVectorUniform.x to edit its value.");
+
+					ImGui::Separator();
+					ImGui::InputText("Uniform name", buffText, 32);
+
+
+					if (ImGui::Button("Close", ImVec2(100, 30)))
+						ImGui::CloseCurrentPopup();
+					if (ImGui::Button("Add", ImVec2(100, 30)))
+					{
+						AnimationPlayer::Get()->GetAnimation()->AddKeyframe(buffText, 0.0f, 1.0f); // Todo add.
+						ImGui::CloseCurrentPopup();
+					}
+						
+					ImGui::EndPopup();
+				}
+				ImGui::PopStyleVar();
+				ImGui::PopStyleVar();
 				ImGui::PopStyleVar();
 				ImGui::EndChild();
 			}
@@ -232,6 +287,14 @@ void Window::Draw(Timestep timestep)
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 			ImGui::BeginChild("##time", size, true);
 			{
+				//if (ImGui::IsWindowFocused() && !Input::IsKeyReleased(GLFW_KEY_SPACE))
+				//{
+				//	if (AnimationPlayer::Get()->IsPlaying())
+				//		AnimationPlayer::Get()->Stop();
+				//	else
+				//		AnimationPlayer::Get()->Play();
+				//}
+
 				if (ImGui::BeginPopupContextItem("sssss"))
 				{
 					if (ImGui::Selectable("Add key"))
@@ -318,10 +381,9 @@ void Window::Draw(Timestep timestep)
 								kf[u]->time = time;
 						}
 
-						if (ImGui::Button(id.c_str(), ImVec2(25, 25)))
+					
+						if (ImGui::Button((ICON_FA_CIRCLE + id).c_str() , ImVec2(25, 25)))
 						{
-
-							
 							selectedTrack = uniforms[row];
 							selectedKeyFrame = kf[u];
 						}
