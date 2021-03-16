@@ -158,6 +158,9 @@
     <ClInclude Include="Vendors\imgui\imnodes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Rendering\Pipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Scene.shader" />

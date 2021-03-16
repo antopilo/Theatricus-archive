@@ -79,6 +79,8 @@ const char* types[] = { "float", "int", "vector3", "vector2" };
 float deltaTime = 0.0f;
 KeyFrame* selectedKeyFrame = nullptr;
 std::string selectedTrack = "";
+
+std::vector<std::pair<int, int>> links;
 void Window::Draw(Timestep timestep)
 {
 	int width, height;
@@ -114,6 +116,7 @@ void Window::Draw(Timestep timestep)
 
 			ImVec2 regionAvail = ImGui::GetContentRegionAvail();
 			glm::vec2 viewportPanelSize = glm::vec2(regionAvail.x, regionAvail.y);
+
 			Texture* texture = m_Game->GetFrameBuffer()->GetTexture(GL_COLOR_ATTACHMENT0);
 			texture->Bind();
 			ImGui::Image((void*)(texture->GetId()), regionAvail, ImVec2(0, 1), ImVec2(1, 0));
@@ -473,36 +476,104 @@ void Window::Draw(Timestep timestep)
 		imnodes::BeginNode(hardcoded_node_id);
 			imnodes::BeginNodeTitleBar();
 				ImGui::TextUnformatted("Final Image");
+				ImGui::Image((void*)(m_Game->GetFrameBuffer()->GetTexture(GL_COLOR_ATTACHMENT0)->GetId()), ImVec2(1280/4, 720/4), ImVec2(0, 1), ImVec2(1, 0));
 			imnodes::EndNodeTitleBar();
 
-			// output slot
-			const int output_attr_id = 2;
-			imnodes::BeginOutputAttribute(output_attr_id);
-				ImGui::Text("output");
-			imnodes::EndOutputAttribute();
-
 			imnodes::BeginInputAttribute(3);
-				ImGui::Text("input");
+				ImGui::Text("Input");
 			imnodes::EndInputAttribute();
 		imnodes::EndNode();
 
 		imnodes::BeginNode(2);
-		imnodes::BeginNodeTitleBar();
-		ImGui::TextUnformatted("FrameBuffer 1");
-		imnodes::EndNodeTitleBar();
+			imnodes::BeginNodeTitleBar();
+			ImGui::TextUnformatted("FrameBuffer 1");
+			imnodes::EndNodeTitleBar();
 
-		// output slot
-		imnodes::BeginOutputAttribute(4);
-		ImGui::Text("output");
-		imnodes::EndOutputAttribute();
 
-		imnodes::BeginInputAttribute(6);
-		ImGui::Text("input");
-		imnodes::EndInputAttribute();
+
+
+			int x = 0;
+			int y = 0;
+
+			ImGui::Text("Viewport size");
+			ImGui::SetNextItemWidth(100);
+			ImGui::InputInt("X", &x); 
+			ImGui::SetNextItemWidth(100);
+			ImGui::InputInt("Y", &y);
+
+			// output slot
+			imnodes::BeginOutputAttribute(4);
+			ImGui::Text("Depth");
+			imnodes::EndOutputAttribute();
+
+			imnodes::BeginOutputAttribute(5);
+			ImGui::Text("Color 0");
+			imnodes::EndOutputAttribute();
+
+			imnodes::BeginInputAttribute(22);
+			ImGui::Text("Shader");
+			imnodes::EndInputAttribute();
 		imnodes::EndNode();
 
-		imnodes::EndNodeEditor();
+		// Texture
+		{
+			imnodes::BeginNode(5);
+			imnodes::BeginNodeTitleBar();
+				ImGui::TextUnformatted("Texture");
+				FrameBuffer* fb = m_Game->GetFrameBuffer();
+				int x = fb->GetSize().x;
+				int y = fb->GetSize().y;
+				ImGui::Image((void*)(fb->GetTexture(GL_COLOR_ATTACHMENT0)->GetId()), ImVec2(x / 4, y / 4), ImVec2(0, 1), ImVec2(1, 0));
+			imnodes::EndNodeTitleBar();
 
+			ImGui::Text("Texture size");
+			ImGui::SetNextItemWidth(100);
+			ImGui::InputFloat("X", &(m_Game->GetFrameBuffer()->m_Size.x));
+			ImGui::SetNextItemWidth(100);
+			ImGui::InputFloat("Y", &(m_Game->GetFrameBuffer()->m_Size.y));
+			ImGui::Button("Format");
+
+			imnodes::BeginInputAttribute(64);
+				ImGui::Text("Framebuffer");
+			imnodes::EndInputAttribute();
+
+			imnodes::BeginOutputAttribute(35);
+				ImGui::Text("Output");
+			imnodes::EndOutputAttribute();
+
+			imnodes::EndNode();
+		}
+
+		// Shader
+		{
+			imnodes::BeginNode(7);
+			imnodes::BeginNodeTitleBar();
+			ImGui::TextUnformatted("Shader");
+			imnodes::EndNodeTitleBar();
+
+			ImGui::Button("Select shader");
+
+			imnodes::BeginOutputAttribute(6);
+			ImGui::Text("Framebuffer");
+			imnodes::EndOutputAttribute();
+
+			imnodes::EndNode();
+		}
+		for (int i = 0; i < links.size(); ++i)
+		{
+			const std::pair<int, int> p = links[i];
+			// in this case, we just use the array index of the link
+			// as the unique identifier
+			imnodes::Link(i, p.first, p.second);
+		}
+		imnodes::EndNodeEditor();
+		int start_attr, end_attr;
+		if (imnodes::IsLinkCreated(&start_attr, &end_attr))
+		{
+			links.push_back(std::make_pair(start_attr, end_attr));
+		}
+
+		
 		
 	}
 	ImGui::End();

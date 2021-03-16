@@ -11,13 +11,14 @@ private:
 	unsigned int m_RenderBufferId;
 
 	bool m_hasRenderBuffer;
-	glm::vec2 m_Size;
+
 	
 	// Attachment textures.
 	std::map<GLenum, Texture*> m_Textures;
 
 
 public:
+	glm::vec2 m_Size;
 	FrameBuffer(int sizeX, int sizeY, bool hasRenderBuffer);
 
 	void AttachTexture(Texture* texture, GLenum attachment);

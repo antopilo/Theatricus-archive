@@ -75,9 +75,6 @@ void FrameBuffer::Resize(glm::vec2 size)
 
 void FrameBuffer::Bind()
 {
-	// check for resize
-
-
 	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_FramebufferId);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glViewport(0, 0, m_Size.x, m_Size.y);

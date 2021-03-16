@@ -421,8 +421,8 @@ void main()
     float noisey = snoise(camRay.pos/2.0 + (deltaTime) / 2.0f);
     color = vec4(normal, 1.0f );
     color.b *= 1.0f - sqrt((float(iters ) / float(maxIters)));
-    color.r *= 1.0f - sqrt((float(iters + deltaTime/25.0f ) / float(maxIters)));
-    color.g *= 1.0f - sqrt((float(iters * 2.0) / float(maxIters)));
+    color.r *= 1.0f - sqrt((float(iters ) / float(maxIters)));
+    color.g *= 1.0f - sqrt((float(iters) / float(maxIters)));
     //color.r += (noisex + 1.0) / 10.0;
     //color.g += (noisey + 1.0) / 7.0;
 	float infinite = iters / 250;

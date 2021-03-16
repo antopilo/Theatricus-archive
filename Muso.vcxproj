@@ -177,6 +177,7 @@
     <ClInclude Include="Input\Input.h" />
     <ClInclude Include="Rendering\FrameBuffer.h" />
     <ClInclude Include="Rendering\Header.h" />
+    <ClInclude Include="Rendering\Pipeline.h" />
     <ClInclude Include="Rendering\Renderer.h" />
     <ClInclude Include="Rendering\Shader.h" />
     <ClInclude Include="Rendering\Texture.h" />
