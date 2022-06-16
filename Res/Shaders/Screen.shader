@@ -265,7 +265,7 @@ float snoise(vec3 v) {
         dot(p2, x2), dot(p3, x3)));
 }
 
-int currentScene = 0;
+int currentScene = 2;
 
 float scene0(vec3 p)
 {
@@ -301,10 +301,10 @@ float scene1(vec3 p)
 
 float scene2(vec3 p)
 {
-    float distanceFactor = 1;
+    float distanceFactor = 0.6;
     vec3 cs = vec3(0.7, 0.8f, 0.5f);
 
-    int fractal_iterations = 12;
+    int fractal_iterations = 9;
     for (int i = 0; i < fractal_iterations; i++)
     {
         p =2 * clamp(p, -cs, cs) - p;
@@ -443,6 +443,7 @@ void main()
 	//color = mix(color, vec4(totalDist / 1.0f), 0.0f);
     FragColor = color;
 }
+
 
 
 
