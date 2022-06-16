@@ -1,8 +1,9 @@
 #pragma once
 #include "Animation.h"
 #include "Timestep.h"
-
-
+#include "aquila/aquila.h"
+#include "aquila/global.h"
+#include "aquila/transform/OouraFft.h"
 
 
 class AnimationPlayer
@@ -10,7 +11,7 @@ class AnimationPlayer
 private:
 	static AnimationPlayer* m_Instance;
 
-	
+	Aquila::WaveFile*  wav;
 
 	Animation* m_Animation;
 	bool m_Playing = false;
@@ -30,6 +31,8 @@ public:
 	{ 
 		m_Instance = this; 
 		m_Animation = new Animation();
+		
+		wav = new Aquila::WaveFile("Res/BabyElephantWalk60.wav");
 	}
 
 	~AnimationPlayer() 
@@ -43,6 +46,13 @@ public:
 	{
 		if (IsPlaying())
 			m_CurrentTime += ts;
+
+		int currentSample = (m_CurrentTime * wav->getBytesPerSec()) / wav->getBytesPerSample();
+		std::cout << "Current sample: " << currentSample << std::endl;
+
+		auto sample = wav->sample(currentSample);
+
+
 
 		if (m_CurrentTime >= m_MaxTime)
 			Stop();

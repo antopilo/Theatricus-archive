@@ -34,10 +34,7 @@ int main()
 	plt.setTitle("Spectrum");
 	plt.plotSpectrum(spectrum);
 
-	Aquila::WaveFile wav("Res/BabyElephantWalk60.wav");
-
-	std::cout << "Loaded file: " << wav.getFilename()
-		<< " (" << wav.getBitsPerSample() << "b)" << std::endl;
+	
 
 	Aquila::SampleType maxValue = 0, minValue = 0, average = 0;
 
