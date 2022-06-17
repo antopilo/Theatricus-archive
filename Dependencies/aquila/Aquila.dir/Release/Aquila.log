@@ -1,0 +1,68 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/CMakeLists.txt
+  MelFilter.cpp
+  MelFilterBank.cpp
+  Dtw.cpp
+  SignalSource.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Frame.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\Frame.cpp(37,5): warning C4267: 'initialisation' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  FramesCollection.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\FramesCollection.cpp(95,68): warning C4267: 'initialisation' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\FramesCollection.cpp(95,68): warning C4267: 'initialisation' : conversion de 'size_t' en 'const unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\FramesCollection.cpp(103,43): warning C4267: '=' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  PlainTextFile.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  WaveFile.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  WaveFileHandler.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.cpp(128,89): warning C4267: 'initialisation' : conversion de 'size_t' en 'uint32_t', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.cpp(130,9): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.cpp(134,9): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.cpp(135,9): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.cpp(143,9): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  SineGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  SquareGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  TriangleGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  PinkNoiseGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  WhiteNoiseGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  BarlettWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  BlackmanWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  FlattopWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  GaussianWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  HammingWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+  Compilation en cours...
+  HannWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Dft.cpp
+  AquilaFft.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\AquilaFft.cpp(51,22): warning C4267: '=' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\AquilaFft.cpp(120,22): warning C4267: '=' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  OouraFft.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\OouraFft.cpp(72,31): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\OouraFft.cpp(101,30): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  FftFactory.cpp
+  Dct.cpp
+  Mfcc.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\../source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Spectrogram.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  TextPlot.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\tools\../source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+  Aquila.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\Release\Aquila.lib

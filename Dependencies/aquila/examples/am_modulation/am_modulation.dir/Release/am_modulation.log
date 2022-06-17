@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/am_modulation/CMakeLists.txt
+  am_modulation.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  am_modulation.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\am_modulation\Release\am_modulation.exe

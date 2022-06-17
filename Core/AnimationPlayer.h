@@ -50,9 +50,16 @@ public:
 		int currentSample = (m_CurrentTime * wav->getBytesPerSec()) / wav->getBytesPerSample();
 		std::cout << "Current sample: " << currentSample << std::endl;
 
-		auto sample = wav->sample(currentSample);
+		auto asample = wav->sample(currentSample);
+		std::cout << asample << std::endl;
+
+		Aquila::OouraFft fft(wav->getBytesPerSample());
+
+		Aquila::SpectrumType spectrum = fft.fft(&asample);
+		
 
 
+		// calculate the FFT
 
 		if (m_CurrentTime >= m_MaxTime)
 			Stop();

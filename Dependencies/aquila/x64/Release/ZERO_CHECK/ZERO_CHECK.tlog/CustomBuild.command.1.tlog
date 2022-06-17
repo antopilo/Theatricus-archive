@@ -1,0 +1,10 @@
+^C:\USERS\ANTOINE\DESKTOP\THEATRICUS\DEPENDENCIES\AQUILA\CMAKEFILES\E9F08AF43AFF357CD0997EADCF6E3564\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila -BC:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/Aquila.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

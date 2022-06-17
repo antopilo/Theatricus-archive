@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\Main.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestAssertHandler.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestCheckMacros.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestChecks.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestCompositeTestReporter.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestCurrentTest.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestDeferredTestReporter.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestExceptions.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestMemoryOutStream.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTest.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTestList.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTestMacros.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTestResults.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTestRunner.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTestSuite.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTimeConstraint.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestTimeConstraintMacro.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestUnitTestPP.cpp" />
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\TestXmlTestReporter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\RecordingReporter.h" />
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\tests\ScopedCurrentTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\lib\unittestpp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

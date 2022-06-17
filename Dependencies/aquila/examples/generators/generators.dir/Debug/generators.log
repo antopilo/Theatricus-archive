@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/generators/CMakeLists.txt
+  generators.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\generators\generators.cpp(10,25): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  generators.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\generators\Debug\generators.exe

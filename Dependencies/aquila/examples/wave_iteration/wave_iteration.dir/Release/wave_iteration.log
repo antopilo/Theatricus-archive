@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/wave_iteration/CMakeLists.txt
+  wave_iteration.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\wave_iteration\wave_iteration.cpp(47,20): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+  wave_iteration.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\wave_iteration\Release\wave_iteration.exe

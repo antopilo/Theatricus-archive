@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/dtw_path_recovery/CMakeLists.txt
+  dtw_path_recovery.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\dtw_path_recovery\dtw_path_recovery.cpp(39,25): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  dtw_path_recovery.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\dtw_path_recovery\Release\dtw_path_recovery.exe

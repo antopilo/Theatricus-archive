@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/frame_iteration/CMakeLists.txt
+  frame_iteration.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\frame_iteration\frame_iteration.cpp(14,25): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  frame_iteration.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\frame_iteration\Debug\frame_iteration.exe

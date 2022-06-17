@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\filter\MelFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\filter\MelFilterBank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\ml\Dtw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\FramesCollection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\PlainTextFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\Generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\SineGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\SquareGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\TriangleGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\PinkNoiseGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\WhiteNoiseGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\BarlettWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\BlackmanWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\FlattopWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\GaussianWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\HammingWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\HannWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Dft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\AquilaFft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\OouraFft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\FftFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Dct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Mfcc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Spectrogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\tools\TextPlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\aquila.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\Exceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\ml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\filter\MelFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\filter\MelFilterBank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\ml\DtwPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\ml\Dtw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\Frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\FramesCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\PlainTextFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\RawPcmFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\WaveFileHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\Generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\SineGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\SquareGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\TriangleGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\PinkNoiseGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\WhiteNoiseGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\BarlettWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\BlackmanWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\FlattopWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\GaussianWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\HammingWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\HannWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\RectangularWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Fft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Dft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\AquilaFft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\OouraFft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\FftFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Dct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Mfcc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\transform\Spectrogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\tools\TextPlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8D4F50E6-4D49-3D7A-A1ED-666A34F69382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{15F6F49E-D3B5-3ABF-A86F-3D906F63A573}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

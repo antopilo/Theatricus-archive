@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/window_plot/CMakeLists.txt
+  window_plot.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  window_plot.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\window_plot\Debug\window_plot.exe

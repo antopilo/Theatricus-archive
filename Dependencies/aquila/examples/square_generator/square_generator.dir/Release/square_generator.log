@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/square_generator/CMakeLists.txt
+  square_generator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  square_generator.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\square_generator\Release\square_generator.exe

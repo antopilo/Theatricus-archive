@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\CMakeFiles\d242f20310d9cfb5aa71e14fcd40fa51\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A7D2C437-41B1-3252-B20E-F461013C0F90}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

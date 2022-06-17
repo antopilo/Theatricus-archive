@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/mfcc_calculation/CMakeLists.txt
+  mfcc_calculation.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  mfcc_calculation.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\mfcc_calculation\Debug\mfcc_calculation.exe

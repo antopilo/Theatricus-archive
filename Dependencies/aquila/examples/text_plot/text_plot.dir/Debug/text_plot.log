@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/text_plot/CMakeLists.txt
+  text_plot.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\tools\../source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  text_plot.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\text_plot\Debug\text_plot.exe

@@ -1,0 +1,46 @@
+﻿  AnimationPlayer.cpp
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(5,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Core\AnimationPlayer.h(50,21): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  Game.cpp
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(5,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Core\AnimationPlayer.h(50,21): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  Window.cpp
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(3,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(5,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Core\AnimationPlayer.h(50,21): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(122,42): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(379,76): warning C4305: 'argument' : troncation de 'double' à 'float'
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(479,94): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(524,11): warning C4244: 'initialisation' : conversion de 'T' en 'int', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(525,11): warning C4244: 'initialisation' : conversion de 'T' en 'int', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(526,72): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(526,90): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(526,83): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(311,37): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(312,42): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(313,41): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(406,38): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(407,44): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+C:\Users\Antoine\Desktop\Theatricus\Window.cpp(408,43): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+  Génération de code en cours...
+C:\Users\Antoine\Desktop\Theatricus\Core\Animation.h(333): warning C4715: 'Animation::GetUniformValue' : les chemins de contrôle ne retournent pas tous une valeur
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'glew_static.pdb' n'a pu être trouvé avec 'glew32s.lib(glew.obj)' ou sur 'C:\Users\Antoine\Desktop\Theatricus\x64\Debug\glew_static.pdb' ; l'objet sera lié sans informations de débogage
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'MSVCRT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'LIBCMT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+  Muso.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\x64\Debug\Muso.exe

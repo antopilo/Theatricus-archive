@@ -1,0 +1,511 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/tests/CMakeLists.txt
+  main.cpp
+  functions.cpp
+  Exceptions.cpp
+  MelFilter.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\filter\MelFilter.cpp(58,32): warning C4244: 'initialisation' : conversion de 'Aquila::FrequencyType' en 'size_t', perte possible de données
+  MelFilterBank.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\filter\MelFilterBank.cpp(20,32): warning C4244: 'initialisation' : conversion de 'Aquila::FrequencyType' en 'size_t', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\filter\MelFilterBank.cpp(45): message : voir la référence à l'instanciation de la fonction modèle 'void testMelFilterBankOutput<1024>(void)' en cours de compilation
+  Dtw.cpp
+  Frame.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  FramesCollection.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  PlainTextFile.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  RawPcmFile.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int64_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int64_t *,
+              Numeric=int64_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(85): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<int64_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint64_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint64_t *,
+              Numeric=uint64_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(80): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<uint64_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=int32_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int32_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int32_t *,
+              Numeric=int32_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=int32_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=int32_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=int32_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(75): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<int32_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=uint32_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint32_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint32_t *,
+              Numeric=uint32_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=uint32_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=uint32_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=uint32_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(70): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<uint32_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=int16_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int16_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int16_t *,
+              Numeric=int16_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=int16_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=int16_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=int16_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(65): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<int16_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=int8_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int8_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=int8_t *,
+              Numeric=int8_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=int8_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=int8_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=int8_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(55): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<int8_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=uint8_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint8_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint8_t *,
+              Numeric=uint8_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)'
+          with
+          [
+              Numeric=uint8_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<Numeric>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+          with
+          [
+              Numeric=uint8_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<Numeric>' en cours de compilation
+          with
+          [
+              Numeric=uint8_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(50): message : voir la référence à l'instanciation de la fonction modèle 'void savePcmTest<uint8_t>(void)' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Aquila::SampleType' en 'Numeric', perte possible de données
+          with
+          [
+              Numeric=uint16_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4080): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::_Copy_unchecked<_InIt,_OutIt>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint16_t *,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(82): message : voir la référence à l'instanciation de la fonction modèle '_OutIt std::copy<Aquila::SignalSource::iterator,Numeric*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=uint16_t *,
+              Numeric=uint16_t,
+              _InIt=Aquila::SignalSource::iterator
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(76): message : pendant la compilation de la fonction membre classe modèle 'void Aquila::RawPcmFile<uint16_t>::save(const Aquila::SignalSource &,const std::string &)'
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(14): message : voir la référence à l'instanciation de la fonction modèle 'void Aquila::RawPcmFile<uint16_t>::save(const Aquila::SignalSource &,const std::string &)' en cours de compilation
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(29): message : voir la référence à l'instanciation classe modèle 'Aquila::RawPcmFile<uint16_t>' en cours de compilation
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Numeric' en 'double', perte possible de données
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1298): message : voir la référence à l'instanciation de la fonction modèle '_OutIt *std::_Copy_unchecked<_Iter,double*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=double *,
+              _Iter=int64_t *,
+              _InIt=int64_t *
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1321): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::_Assign_range<_Iter>(_Iter,_Iter,std::forward_iterator_tag)' en cours de compilation
+          with
+          [
+              _Iter=int64_t *
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1321): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::_Assign_range<_Iter>(_Iter,_Iter,std::forward_iterator_tag)' en cours de compilation
+          with
+          [
+              _Iter=int64_t *
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(64): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::assign<Numeric*,0>(_Iter,_Iter)' en cours de compilation
+          with
+          [
+              Numeric=int64_t,
+              _Iter=int64_t *
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(64): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::assign<Numeric*,0>(_Iter,_Iter)' en cours de compilation
+          with
+          [
+              Numeric=int64_t,
+              _Iter=int64_t *
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(49): message : pendant la compilation de la fonction membre classe modèle 'Aquila::RawPcmFile<Numeric>::RawPcmFile(std::string,Aquila::FrequencyType)'
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(16): message : voir la référence à l'instanciation de la fonction modèle 'Aquila::RawPcmFile<Numeric>::RawPcmFile(std::string,Aquila::FrequencyType)' en cours de compilation
+          with
+          [
+              Numeric=int64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(4068,18): warning C4244: '=' : conversion de 'Numeric' en 'double', perte possible de données
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1298): message : voir la référence à l'instanciation de la fonction modèle '_OutIt *std::_Copy_unchecked<_Iter,double*>(_InIt,_InIt,_OutIt)' en cours de compilation
+          with
+          [
+              _OutIt=double *,
+              _Iter=uint64_t *,
+              _InIt=uint64_t *
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1321): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::_Assign_range<_Iter>(_Iter,_Iter,std::forward_iterator_tag)' en cours de compilation
+          with
+          [
+              _Iter=uint64_t *
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1321): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::_Assign_range<_Iter>(_Iter,_Iter,std::forward_iterator_tag)' en cours de compilation
+          with
+          [
+              _Iter=uint64_t *
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(64): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::assign<Numeric*,0>(_Iter,_Iter)' en cours de compilation
+          with
+          [
+              Numeric=uint64_t,
+              _Iter=uint64_t *
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(64): message : voir la référence à l'instanciation de la fonction modèle 'void std::vector<Aquila::SampleType,std::allocator<Aquila::SampleType>>::assign<Numeric*,0>(_Iter,_Iter)' en cours de compilation
+          with
+          [
+              Numeric=uint64_t,
+              _Iter=uint64_t *
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/RawPcmFile.h(49): message : pendant la compilation de la fonction membre classe modèle 'Aquila::RawPcmFile<Numeric>::RawPcmFile(std::string,Aquila::FrequencyType)'
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\RawPcmFile.cpp(16): message : voir la référence à l'instanciation de la fonction modèle 'Aquila::RawPcmFile<Numeric>::RawPcmFile(std::string,Aquila::FrequencyType)' en cours de compilation
+          with
+          [
+              Numeric=uint64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(680,47): warning C4244: 'initialisation' : conversion de 'Numeric' en '_Objty', perte possible de données
+          with
+          [
+              Numeric=int64_t
+          ]
+          and
+          [
+              _Objty=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1656): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Numeric&>(_Alloc &,_Objty *const ,Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              _Ty=double,
+              Numeric=int64_t,
+              _Objty=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1656): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Numeric&>(_Alloc &,_Objty *const ,Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              _Ty=double,
+              Numeric=int64_t,
+              _Objty=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1695): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Uninitialized_backout_al<_Alloc>::_Emplace_back<Numeric&>(Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              Numeric=int64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1695): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Uninitialized_backout_al<_Alloc>::_Emplace_back<Numeric&>(Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              Numeric=int64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1285): message : voir la référence à l'instanciation de la fonction modèle 'double *std::_Uninitialized_copy<_Iter,std::allocator<Aquila::SampleType>>(const _InIt,const _InIt,double *,_Alloc &)' en cours de compilation
+          with
+          [
+              _Iter=int64_t *,
+              _InIt=int64_t *,
+              _Alloc=std::allocator<Aquila::SampleType>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(680,47): warning C4244: 'initialisation' : conversion de 'Numeric' en '_Objty', perte possible de données
+          with
+          [
+              Numeric=uint64_t
+          ]
+          and
+          [
+              _Objty=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1656): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Numeric&>(_Alloc &,_Objty *const ,Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              _Ty=double,
+              Numeric=uint64_t,
+              _Objty=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1656): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,Numeric&>(_Alloc &,_Objty *const ,Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              _Ty=double,
+              Numeric=uint64_t,
+              _Objty=double
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1695): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Uninitialized_backout_al<_Alloc>::_Emplace_back<Numeric&>(Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              Numeric=uint64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xmemory(1695): message : voir la référence à l'instanciation de la fonction modèle 'void std::_Uninitialized_backout_al<_Alloc>::_Emplace_back<Numeric&>(Numeric &)' en cours de compilation
+          with
+          [
+              _Alloc=std::allocator<Aquila::SampleType>,
+              Numeric=uint64_t
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\vector(1285): message : voir la référence à l'instanciation de la fonction modèle 'double *std::_Uninitialized_copy<_Iter,std::allocator<Aquila::SampleType>>(const _InIt,const _InIt,double *,_Alloc &)' en cours de compilation
+          with
+          [
+              _Iter=uint64_t *,
+              _InIt=uint64_t *,
+              _Alloc=std::allocator<Aquila::SampleType>
+          ]
+  SignalSource.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  WaveFile.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila/source/SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  SineGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  SquareGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\SquareGenerator.cpp(37,26): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\SquareGenerator.cpp(45,26): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\SquareGenerator.cpp(53,26): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\SquareGenerator.cpp(61,26): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\SquareGenerator.cpp(69,26): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\SquareGenerator.cpp(77,26): warning C4244: 'initialisation' : conversion de '__int64' en 'int', perte possible de données
+  TriangleGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  WhiteNoiseGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\WhiteNoiseGenerator.cpp(16,29): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\WhiteNoiseGenerator.cpp(26,29): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  PinkNoiseGenerator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\PinkNoiseGenerator.cpp(16,29): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\source\generator\PinkNoiseGenerator.cpp(26,29): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  BarlettWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  BlackmanWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  FlattopWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+  Compilation en cours...
+  GaussianWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  HammingWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  HannWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  RectangularWindow.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\window\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  TextPlot.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  AquilaFft.cpp
+  Dft.cpp
+  Fft.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\transform\Fft.cpp(29,20): warning C4244: 'initialisation' : conversion de '__int64' en 'unsigned int', perte possible de données
+  Mfcc.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  OouraFft.cpp
+  Dct.cpp
+  Spectrogram.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\transform\Spectrogram.cpp(16,63): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\transform\Spectrogram.cpp(23,30): warning C4244: 'initialisation' : conversion de 'Aquila::FrequencyType' en 'size_t', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\transform\Spectrogram.cpp(33,9): warning C4267: 'argument' : conversion de 'size_t' en 'const int', perte possible de données
+  Génération de code en cours...
+  aquila_test.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\tests\Release\aquila_test.exe

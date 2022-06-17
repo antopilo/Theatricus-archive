@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/fft_comparison/CMakeLists.txt
+  fft_comparison.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\fft_comparison\fft_comparison.cpp(31,35): warning C4334: '<<' : résultat du décalage 32 bits converti implicitement en 64 bits (le décalage 64 bits est-il intentionnel ?)
+  fft_comparison.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\fft_comparison\Debug\fft_comparison.exe

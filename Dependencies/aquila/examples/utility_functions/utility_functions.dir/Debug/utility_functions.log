@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/utility_functions/CMakeLists.txt
+  utility_functions.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\utility_functions\utility_functions.cpp(9,25): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  utility_functions.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\utility_functions\Debug\utility_functions.exe

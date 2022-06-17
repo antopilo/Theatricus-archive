@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/spectrogram/CMakeLists.txt
+  spectrogram.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\spectrogram\spectrogram.cpp(14,74): warning C4244: 'initialisation' : conversion de 'double' en 'unsigned int', perte possible de données
+  spectrogram.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\spectrogram\Release\spectrogram.exe

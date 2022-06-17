@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/triangle_generator/CMakeLists.txt
+  triangle_generator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  triangle_generator.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\triangle_generator\Debug\triangle_generator.exe

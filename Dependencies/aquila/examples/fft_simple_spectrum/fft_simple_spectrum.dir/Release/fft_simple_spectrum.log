@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/fft_simple_spectrum/CMakeLists.txt
+  fft_simple_spectrum.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  fft_simple_spectrum.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\fft_simple_spectrum\Release\fft_simple_spectrum.exe

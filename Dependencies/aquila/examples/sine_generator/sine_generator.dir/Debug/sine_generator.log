@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Antoine/Desktop/Theatricus/Dependencies/aquila/examples/sine_generator/CMakeLists.txt
+  sine_generator.cpp
+C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\aquila\source\generator\../SignalSource.h(205,1): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  sine_generator.vcxproj -> C:\Users\Antoine\Desktop\Theatricus\Dependencies\aquila\examples\sine_generator\Debug\sine_generator.exe
